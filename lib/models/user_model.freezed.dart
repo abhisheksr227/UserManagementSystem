@@ -16,9 +16,13 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$User {
+  @HiveField(1)
   String get id => throw _privateConstructorUsedError;
+  @HiveField(2)
   String get name => throw _privateConstructorUsedError;
+  @HiveField(3)
   String get email => throw _privateConstructorUsedError;
+  @HiveField(4)
   DateTime get createdAt => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -30,7 +34,11 @@ abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res, User>;
   @useResult
-  $Res call({String id, String name, String email, DateTime createdAt});
+  $Res call(
+      {@HiveField(1) String id,
+      @HiveField(2) String name,
+      @HiveField(3) String email,
+      @HiveField(4) DateTime createdAt});
 }
 
 /// @nodoc
@@ -79,7 +87,11 @@ abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
       __$$UserImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, String name, String email, DateTime createdAt});
+  $Res call(
+      {@HiveField(1) String id,
+      @HiveField(2) String name,
+      @HiveField(3) String email,
+      @HiveField(4) DateTime createdAt});
 }
 
 /// @nodoc
@@ -123,18 +135,22 @@ class __$$UserImplCopyWithImpl<$Res>
 @HiveField(0)
 class _$UserImpl implements _User {
   const _$UserImpl(
-      {required this.id,
-      required this.name,
-      required this.email,
-      required this.createdAt});
+      {@HiveField(1) required this.id,
+      @HiveField(2) required this.name,
+      @HiveField(3) required this.email,
+      @HiveField(4) required this.createdAt});
 
   @override
+  @HiveField(1)
   final String id;
   @override
+  @HiveField(2)
   final String name;
   @override
+  @HiveField(3)
   final String email;
   @override
+  @HiveField(4)
   final DateTime createdAt;
 
   @override
@@ -166,18 +182,22 @@ class _$UserImpl implements _User {
 
 abstract class _User implements User {
   const factory _User(
-      {required final String id,
-      required final String name,
-      required final String email,
-      required final DateTime createdAt}) = _$UserImpl;
+      {@HiveField(1) required final String id,
+      @HiveField(2) required final String name,
+      @HiveField(3) required final String email,
+      @HiveField(4) required final DateTime createdAt}) = _$UserImpl;
 
   @override
+  @HiveField(1)
   String get id;
   @override
+  @HiveField(2)
   String get name;
   @override
+  @HiveField(3)
   String get email;
   @override
+  @HiveField(4)
   DateTime get createdAt;
   @override
   @JsonKey(ignore: true)

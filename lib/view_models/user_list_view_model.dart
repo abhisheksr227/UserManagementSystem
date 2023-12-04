@@ -18,9 +18,12 @@ class UserListViewModel extends ChangeNotifier {
   }
 
   void deleteUser(String userId) {
+    print('Before deletion: ${_userBox.values}');
     _userBox.delete(userId);
-    notifyListeners(); // Notify listeners
+    print('After deletion: ${_userBox.values}');
+    notifyListeners();
   }
+
 
 
 
